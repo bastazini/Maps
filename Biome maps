@@ -1,0 +1,29 @@
+rm(list=ls())
+
+##pacakges:
+library(sp)
+library(raster)
+library(maptools)
+library(rgdal)
+
+##shapes
+sa=rgdal::readOGR("southamerica_adm0.shp")
+ma=rgdal::readOGR("Atlantic forest_hotspot.shp")
+cerrado=rgdal::readOGR("Cerrado.shp")
+
+plot(sa)
+plot(ma)
+plot(cerrado)
+
+### Ocurrence points
+#lendo arquivo com ocorrencias especie
+
+pontos= read.table("pontos", h=T)
+class(pontos)
+
+plot(sa)
+plot(ma, add=T, col="green")
+plot(cerrado,add=T, col="yellow")
+points(pontos, col="red", pch=16)
+points(pontos, col="gray",cex=0.8)
+points(pontos, col="gray",pch=16)
