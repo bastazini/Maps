@@ -1,6 +1,6 @@
 rm(list=ls())
 
-##pacakges:
+###pacakges:
 library(sp)
 library(raster)
 library(maptools)
