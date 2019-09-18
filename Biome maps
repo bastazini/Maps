@@ -6,7 +6,7 @@ library(raster)
 library(maptools)
 library(rgdal)
 
-##shapes
+##shapes of "biomes" of South america
 sa=rgdal::readOGR("southamerica_adm0.shp")
 ma=rgdal::readOGR("Atlantic forest_hotspot.shp")
 cerrado=rgdal::readOGR("Cerrado.shp")
